@@ -8,7 +8,8 @@
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
     "start": "npm run build",
     "test-transpile": "node ./node_modules/babel-cli/bin/babel.js directive.spec.js --out-file test/test.js",
-    "run-mocha": "mocha ./test/test.js"
+    "run-mocha": "mocha ./test/test.js",
+    "webpack": "webpack"
   },
   "author": "",
   "license": "ISC",

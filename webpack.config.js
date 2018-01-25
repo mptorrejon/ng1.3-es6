@@ -30,7 +30,7 @@ module.exports = {
 		new webpack.optimize.CommonsChunkPlugin({
 			name: 'vendor',
 			minChunks: function(module, count){
-				return module.resource && module.resource.indexOf(path.resolve(__dirname, 'dist')) == -1;
+				return module.resource && module.resource.indexOf(path.resolve(__dirname, 'node_modules')) == -1;
 			}
 		})
 	]
