@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
-    "start": "npm run build"
+    "start": "npm run build",
+    "test-transpile": "node ./node_modules/babel-cli/bin/babel.js directive.spec.js --out-file test/test.js",
+    "run-mocha": "mocha ./test/test.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,12 +19,15 @@
   },
   "devDependencies": {
     "angular": "^1.3.14",
+    "angular-mocks": "^1.3.14",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^2.30.1",
+    "jsdom": "^11.6.1",
+    "jsdom-global": "3.0.2",
     "mocha": "^5.0.0",
     "ng-annotate-loader": "^0.6.1",
     "raw": "^0.1.4",

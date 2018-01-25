@@ -1,19 +1,27 @@
 'use strict';
 
-var _angular = require('angular');
+require('jsdom-global/register');
+
+var _angular = require('../node_modules/angular/angular');
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _directive = require('../directive.js');
+var _vendorBundle = require('../dist/vendor.bundle.js');
 
-var _directive2 = _interopRequireDefault(_directive);
+var _vendorBundle2 = _interopRequireDefault(_vendorBundle);
+
+var _angularMocks = require('angular-mocks');
+
+var _angularMocks2 = _interopRequireDefault(_angularMocks);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-console.log(_angular2.default); //test suite
-
-// beforeEach(angular.mock.module("MyApp"));
-
 describe("my-test", function () {
-	console.log(_directive2.default);
+	console.log("Hello World!");
+	// let app = ng.module(directives);
+	console.log(window.angular.module);
 });
+
+// let ng = window.angular;
+// import directives from './directive.js';
+// import app from ''
