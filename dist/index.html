@@ -2,8 +2,11 @@
 	<head>
 	</head>
 	<body ng-app="MyApp">
-		<div ng-controller="myController">
-			<my-directive></my-directive>
-		</div>
-	<script type="text/javascript" src="./vendor.bundle.js?c33422489b70bb5c44ae"></script><script type="text/javascript" src="./main.bundle.js?c33422489b70bb5c44ae"></script></body>
+		<!-- <div ng-controller="IndexController">
+			<h3>ES6/ng1.3 App!!</h3>
+		</div> -->
+		<li><a ui-sref="home">Home</a></li>
+		<li><a ui-sref="about">About</a></li>
+		<div ui-view></div>
+	<script type="text/javascript" src="./vendor.bundle.js?9df121810723d8670e4d"></script><script type="text/javascript" src="./main.bundle.js?9df121810723d8670e4d"></script></body>
 </html>

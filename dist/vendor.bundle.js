@@ -147,10 +147,9 @@
 /******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */,
-/* 2 */
+/******/ ({
+
+/***/ 54:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -159,33 +158,53 @@
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
+exports.RouterModule = undefined;
 
-var _angular = __webpack_require__(0);
+__webpack_require__(27);
+
+var _headerDirective = __webpack_require__(77);
+
+// import IndexController from './index.controller.js';
+var RouterModule = exports.RouterModule = angular.module("RouterMod", ['ui.router', _headerDirective.headerComponent]).config(['$stateProvider', function ($stateProvider) {
+
+	$stateProvider.state("home", {
+		template: '<div>Mauricio</div>'
+	}).state("about", {
+		template: "<site-header></site-header>"
+	});
+}]).name;
+
+/***/ }),
+
+/***/ 77:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.headerComponent = undefined;
+
+var _angular = __webpack_require__(19);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _template = __webpack_require__(3);
-
-var _template2 = _interopRequireDefault(_template);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = myDirective = _angular2.default.module("directives", []).directive('myDirective', [function ($scope) {
+var headerComponent = exports.headerComponent = _angular2.default.module('headerComponent', []).directive('siteHeader', [function siteHeader() {
 	return {
 		restrict: 'E',
-		template: _template2.default,
-		controller: _angular2.default.noop
+		template: "<div>My Header</div>",
+		controller: _angular2.default.noop,
+		controllerAs: "ctrl"
 	};
-}]);
+}]).name;
 
 /***/ }),
-/* 3 */
-/***/ (function(module, exports) {
 
-module.exports = "<div>This is my directive</div>";
-
-/***/ }),
-/* 4 */
+/***/ 78:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -194,22 +213,25 @@ module.exports = "<div>This is my directive</div>";
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
+exports.app = undefined;
 
-var _angular = __webpack_require__(0);
+var _angular = __webpack_require__(19);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _directive = __webpack_require__(2);
+var _router = __webpack_require__(54);
+
+__webpack_require__(27);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = app = _angular2.default.module("MyApp", ['directives']).run();
+// import IndexController from './index.controller';
+var app = exports.app = _angular2.default.module("MyApp", ['ui.router', _router.RouterModule]);
+// .controller('IndexController', IndexController);
 
-console.log(app);
-app.controller('myController', function () {
-	console.log("hello");
-});
+// import ngRoute from 'angular-route';
 
 /***/ })
-/******/ ]);
+
+/******/ });
 //# sourceMappingURL=vendor.bundle.js.map

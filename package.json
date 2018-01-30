@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
-    "start": "npm run build",
+    "start": "rimraf dist/ && webpack",
     "test-transpile": "node ./node_modules/babel-cli/bin/babel.js directive.spec.js --out-file test/test.js",
     "run-mocha": "mocha ./test/test.js",
     "webpack": "webpack"
@@ -14,6 +14,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.13",
+    "angular-ui-router": "^1.0.3",
     "express": "^4.15.2",
     "morgan": "^1.8.1",
     "rimraf": "^2.6.1"
@@ -21,6 +23,7 @@
   "devDependencies": {
     "angular": "^1.3.14",
     "angular-mocks": "^1.3.14",
+    "angular-route": "^1.3.14",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
