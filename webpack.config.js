@@ -17,7 +17,7 @@ module.exports = {
 			{test: /\.js$/, exclude: [/dist|node_modules/], loader: 'babel-loader', query:{presets: ['es2015']} },
 			{test: /\.html$/,use:{loader: 'html-loader',options: { attrs: [':data-src']}} }
 			//{test: /\.(scss|sass)$/, exclude: [/dist/, /node_modules/], loader: "style!css!sass"},
-			// {test: /\.css/,exclude: [/dist/, /node_modules/], loader: "style!css"}
+			{test: /\.scss$/, exclude: [/dist/, /node_modules/], loader: "sass-loader"}
 		]
 	},
 	plugins: [
