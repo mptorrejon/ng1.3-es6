@@ -1,6 +1,9 @@
-body{
-	background: red;
-	li{
+$theme-font: verdana, sans-serif;
+
+body {
+	font: $theme-font;
+	background-color: red;
+	li {
 		color: blue;
 	}
 }

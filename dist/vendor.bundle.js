@@ -150,86 +150,153 @@
 /******/ ({
 
 /***/ 54:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-exports.RouterModule = undefined;
-
-__webpack_require__(27);
-
-var _headerDirective = __webpack_require__(77);
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RouterModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_angularjs__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__uirouter_angularjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__uirouter_angularjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_header_header_directive_js__ = __webpack_require__(77);
 // import IndexController from './index.controller.js';
-var RouterModule = exports.RouterModule = angular.module("RouterMod", ['ui.router', _headerDirective.headerComponent]).config(['$stateProvider', function ($stateProvider) {
 
-	$stateProvider.state("home", {
-		template: '<div>Mauricio</div>'
-	}).state("about", {
-		template: "<site-header></site-header>"
-	});
-}]).name;
+
+
+var RouterModule = angular.module("RouterMod", [
+	'ui.router',
+	__WEBPACK_IMPORTED_MODULE_1__directives_header_header_directive_js__["a" /* headerComponent */]
+]).config([
+	'$stateProvider',
+	function($stateProvider){
+		
+		$stateProvider
+			.state("home", {
+				template: '<div>Mauricio</div>'
+			})
+			.state("about", {
+				template: "<site-header></site-header>"
+			});	
+	}
+]).name;
 
 /***/ }),
 
 /***/ 77:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return headerComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
 
 
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-exports.headerComponent = undefined;
-
-var _angular = __webpack_require__(19);
-
-var _angular2 = _interopRequireDefault(_angular);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var headerComponent = exports.headerComponent = _angular2.default.module('headerComponent', []).directive('siteHeader', [function siteHeader() {
-	return {
-		restrict: 'E',
-		template: "<div>My Header</div>",
-		controller: _angular2.default.noop,
-		controllerAs: "ctrl"
-	};
-}]).name;
+var headerComponent = __WEBPACK_IMPORTED_MODULE_0_angular___default.a.module('headerComponent', [])
+	.directive('siteHeader',[
+		function siteHeader(){
+			return{
+				restrict: 'E',
+				template: "<div>My Header</div>",
+				controller: __WEBPACK_IMPORTED_MODULE_0_angular___default.a.noop,
+				controllerAs: "ctrl"
+			}
+		}
+	]).name;
 
 /***/ }),
 
 /***/ 78:
 /***/ (function(module, exports, __webpack_require__) {
 
+
+var content = __webpack_require__(79);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(81)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/lib/loader.js!./main.scss", function() {
+		var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/lib/loader.js!./main.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 79:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(80)(false);
+// imports
+
+
+// module
+exports.push([module.i, "body {\n  font: verdana, sans-serif;\n  background-color: red; }\n  body li {\n    color: blue; }\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 83:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-exports.app = undefined;
-
-var _angular = __webpack_require__(19);
-
-var _angular2 = _interopRequireDefault(_angular);
-
-var _router = __webpack_require__(54);
-
-__webpack_require__(27);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "app", function() { return app; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__router__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__uirouter_angularjs__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__uirouter_angularjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__uirouter_angularjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__main_scss__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__main_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__main_scss__);
 
 // import IndexController from './index.controller';
-var app = exports.app = _angular2.default.module("MyApp", ['ui.router', _router.RouterModule]);
-// .controller('IndexController', IndexController);
 
 // import ngRoute from 'angular-route';
+
+// import 'app.css';
+
+
+var app =  __WEBPACK_IMPORTED_MODULE_0_angular___default.a.module("MyApp", [
+	'ui.router',
+	__WEBPACK_IMPORTED_MODULE_1__router__["a" /* RouterModule */]
+]);
+// .controller('IndexController', IndexController);
+
+
 
 /***/ })
 
